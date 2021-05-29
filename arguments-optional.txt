@@ -1,0 +1,40 @@
+function addTogether() { //
+  //does arg 1 = number
+  if(typeof arguments[0] === "number"){ 
+    //yes, is there a 2nd arg
+    if(arguments[1]){
+      //yes, does arg 2 = number
+      if(typeof arguments[1] === "number"){
+        // yes, return sum  
+        return arguments[0]+arguments[1]
+      //arg 2 != number
+        } else {
+          return undefined
+        }
+      //no second number, do new function
+      }  else {
+        let num = arguments[0]
+        return function add(newNum) {
+          if(typeof arguments[0] === "number"){
+          return num+newNum
+          }  
+        }
+      }
+  //no type of arg 1 != number    
+  } else { 
+    return undefined
+    }
+} ///main
+  
+  
+  
+ 
+
+addTogether(2,3);
+
+  
+  
+  
+
+
+

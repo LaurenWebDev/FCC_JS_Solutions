@@ -1,0 +1,12 @@
+function sumAll(arr) {
+  const min = Math.min(...arr)
+  const max = Math.max(...arr)
+  let newArr = []
+  for (let i = min; i <= max; i++) {
+    newArr.push(i);
+  }
+
+  return newArr.reduce((sum, num) => sum + num)
+}
+
+sumAll([10, 5]);

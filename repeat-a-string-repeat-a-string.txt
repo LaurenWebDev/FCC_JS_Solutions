@@ -1,0 +1,15 @@
+function repeatStringNumTimes(str, num) {
+  let answer = ""
+  for (let i = 0; i < num; i++) {
+    answer += str;
+  }
+  
+  return answer;
+}
+
+repeatStringNumTimes("abc", 3);
+
+//while (num > 0) {
+//    accumulatedStr += str;
+//    num--;
+//  }

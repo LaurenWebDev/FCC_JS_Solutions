@@ -1,0 +1,15 @@
+function sumFibs(num) {
+  let n1 = 0, n2 = 1, nextTerm, arr = [];
+  for (let i = 1; n1 <= num; i++) {
+    arr.push(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+  }
+
+  return arr
+    .filter(x => x % 2 !== 0)
+    .reduce((a, b) => a + b)
+}
+
+sumFibs(1000);

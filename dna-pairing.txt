@@ -1,0 +1,38 @@
+function pairElement(str) {
+  let arr = str.split('')
+  let arrPairs = []
+  arr.map((elem) => {  
+    let arrTwo = []; 
+    switch(elem) {
+
+      case "A":
+      arrTwo.push(elem,"T")
+      arrPairs.push(arrTwo)
+      arrTwo = []
+      break;
+
+      case "T":
+      arrTwo.push(elem,"A")
+      arrPairs.push(arrTwo)
+      arrTwo = []
+      break;
+
+      case "C":
+      arrTwo.push(elem,"G")
+      arrPairs.push(arrTwo)
+      arrTwo = []
+      break;
+
+      case "G":
+      arrTwo.push(elem,"C")
+      arrPairs.push(arrTwo)
+      arrTwo = []
+      break;
+
+    }
+  })
+  return arrPairs
+}
+
+pairElement("GCG");
+

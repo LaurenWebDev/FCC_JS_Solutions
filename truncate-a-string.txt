@@ -1,0 +1,10 @@
+function truncateString(str, num) {
+  let newNum = num;
+  let newStr = str.substr(0, newNum);
+  return (str.length > newNum ? newStr + "..." : newStr) 
+}
+
+//condition ? exprIfTrue : exprIfFalse
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
+truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length)

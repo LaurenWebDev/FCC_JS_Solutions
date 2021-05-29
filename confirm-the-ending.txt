@@ -1,0 +1,11 @@
+function confirmEnding(str, target) {
+  return target === str.substr(0 - target.length)  
+}
+
+confirmEnding("Bastian", "n");
+
+//0-target.length basically means the ending but accommodating for length of target whether its a word or just a ltr
+
+//regular express way to solve
+//let re = new RegExp(target + "$", "i");
+//  return re.test(str);

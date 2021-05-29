@@ -1,0 +1,12 @@
+function spinalCase(str) {
+  
+  return str
+  .replace(/([a-z])([A-Z])/g, '$1 $2')
+  .replaceAll('_', ' ')
+  .replaceAll(" ", "-")
+  .toLowerCase()
+}
+
+spinalCase('The_Andy_Griffith_Show');
+//https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-spinal-tap-case/16078
+

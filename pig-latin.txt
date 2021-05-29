@@ -1,0 +1,14 @@
+function translatePigLatin(str) {
+  const vow = /[aeiou]/
+  const vowIndex = str.search(vow)
+  
+  if(str[0].match(vow)){
+    return str.concat("way")
+    } else if (vowIndex === -1) {
+      return (str.concat("ay"))
+    } else {
+    return str.slice(vowIndex)
+     .concat(str.slice(0, vowIndex))
+     .concat("ay")
+  }
+}

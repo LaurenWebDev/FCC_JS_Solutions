@@ -1,0 +1,11 @@
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  newArr = arr1
+  //check 1st against 2nd
+  .filter(num => !arr2.includes(num))
+  //then check 2nd against 1st, concat to arr
+  .concat(arr2.filter(num => !arr1.includes(num)));
+  return newArr;
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);

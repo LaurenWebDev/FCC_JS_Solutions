@@ -1,0 +1,14 @@
+function fearNotLetter(str) {
+  const abc = "abcdefghijklmnopqrstuvwxyz"
+  const start = abc.indexOf(str[0])
+  const strTest = abc.substr(start, str.length+1)
+  for (let ltr of strTest) {
+    if (!str.includes(ltr)) {
+      return ltr
+    } 
+  }
+  return undefined
+}
+
+fearNotLetter("abce");
+fearNotLetter("stvwx")
