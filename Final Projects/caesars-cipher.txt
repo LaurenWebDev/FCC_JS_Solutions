@@ -1,0 +1,26 @@
+function rot13(str) {
+  const alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  let arr = str.split("")
+  let ind
+  for (let i = 0; i < arr.length; i++) {
+    ind = alpha.indexOf(arr[i])
+    if(ind > 12 && ind !== -1) {
+      arr.splice(i, 1, alpha[ind-13])
+    } else if (ind <= 12 && ind !== -1) {
+      arr.splice(i, 1, alpha[ind+13])
+    }
+  }
+  return arr.join("")
+
+}
+
+rot13("SERR PBQR PNZC");
+rot13("SERR CVMMN!");
+rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.")
+
+//check if index is 0-12, then + 13; 13-25, then -13, better yet check if index is greater or less than
+//match the letter to alpha master
+//find the index in alpha master
+//take that index and add 13
+//replace the letter with that 
+//join arr
